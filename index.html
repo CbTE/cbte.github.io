@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter/XのリンクをDiscordに送信した際に埋め込みを表示するBOTの比較表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #800080;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            height: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        th,
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        header a {
+            color: #f3edf3;
+            text-decoration: none;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .fixed01,
+        .fixed02 {
+            position: sticky;
+            top: 0;
+            left: 0;
+            color: #fff;
+            background: #333;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: -1px;
+                left: -1px;
+                width: 100%;
+                height: 100%;
+                border: 1px solid #ccc;
+            }
+        }
+
+        .fixed01 {
+            z-index: 2;
+        }
+
+        .fixed02 {
+            z-index: 1;
+        }
+
+        .safe {
+            background-color: #00ff00;
+        }
+
+        .warning {
+            background-color: #ffff00;
+        }
+
+        .danger {
+            background-color: #ff0000;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <header>
+            <div>
+                <h1>ComebackTwitterEmbed</h1>
+                <a href="https://discord.com/oauth2/authorize?client_id=1161267455335862282&permissions=274877958144&scope=bot%20applications.commands"
+                    target="_blank">ComebackTwitterEmbed 招待リンク</a>
+            </div>
+        </header>
+        <h2>Twitter/XのリンクをDiscordに送信した際に埋め込みを表示するBOTの比較表</h2>
+        <div style=" max-width: 100vw;overflow-x: auto;">
+            <table>
+                <tr>
+                    <th class="fixed01">BOT名</th>
+                    <th class="fixed02">ComebackTwitterEmbed</th>
+                    <th class="fixed02">FixTweetBot</th>
+                    <th class="fixed02">LinkFix</th>
+                    <th class="fixed02">Dystopia</th>
+                    <th class="fixed02">Discord External Video Embeds</th>
+                    <th class="fixed02">EmbedEz</th>
+                    <th class="fixed02">TweetEmbedder</th>
+                    <th class="fixed02">Nano Embedding</th>
+                    <th class="fixed02">Keto</th>
+                    <th class="fixed02">TweetFixer</th>
+                    <th class="fixed02">VxT</th>
+                </tr>
+                <tr>
+                    <td class="fixed02">スラッシュコマンド対応</td>
+                    <td class="safe">✓</td>
+                    <td class="safe">✓</td>
+                    <td>/</td>
+                    <td class="safe">✓</td>
+                    <td class="safe">✓</td>
+                    <td class="safe">✓</td>
+                    <td>/</td>
+                    <td class="safe">✓</td>
+                    <td class="safe">✓</td>
+                    <td class="safe">✓</td>
+                    <td class="safe">✓</td>
+                </tr>
+                <tr>
+                    <td class="fixed02">要求される権限が過剰かどうか</td>
+                    <td class="safe">最小限</td>
+                    <td class="safe">最小限</td>
+                    <td class="warning">少し余分な権限がある</td>
+                    <td class="warning">少し余分な権限がある</td>
+                    <td class="safe">最小限</td>
+                    <td class="danger">プライバシー侵害あり</td>
+                    <td class="danger">プライバシー侵害あり</td>
+                    <td>「他のボットのコマンドの使用」と「サーバーの絵文字とステッカーの変更」以外最小限</td>
+                    <td class="danger">プライバシー侵害および濫用的な書き込み権限</td>
+                    <td class="danger">動作に必要な最低限の権限が不足している</td>
+                    <td class="danger">非常に濫用的な権限</td>
+                </tr>
+                <tr>
+                    <td class="fixed02">対応言語</td>
+                    <td>日本語,英語</td>
+                    <td>フランス語, 英語</td>
+                    <td>/</td>
+                    <td>英語</td>
+                    <td>英語</td>
+                    <td>英語</td>
+                    <td>/</td>
+                    <td>英語</td>
+                    <td>英語</td>
+                    <td>英語</td>
+                    <td>英語</td>
+                </tr>
+                <tr>
+                    <td class="fixed02">使用サービス・埋め込み形式</td>
+                    <td>埋め込みの再現(vxtwitterのAPIを使用)</br>BOTやWebhookに反応させる設定が可能</td>
+                    <td>fxtwitter</td>
+                    <td>fxtwitter</td>
+                    <td>vxtwitter</td>
+                    <td>discord埋め込みの再現</td>
+                    <td class="warning">自家製 (embedez[.]com)</td>
+                    <td>discord埋め込みおよびfxtwitter APIを使用した埋め込みの再現</td>
+                    <td>埋め込みの再現</td>
+                    <td>fxtwitter</td>
+                    <td>fxtwitter</td>
+                    <td>fxtwitterまたは任意のプロキシサービス</td>
+                </tr>
+                <tr>
+                    <td class="fixed02">送信されたメッセージの変更</td>
+                    <td>変更しない、もしくはリンクしか提供されていない場合はメッセージを削除する設定が可能</td>
+                    <td>埋め込みの削除</td>
+                    <td>✕</td>
+                    <td>メッセージの削除</td>
+                    <td>変更しない、もしくは埋め込みの削除または削除</td>
+                    <td>✕</td>
+                    <td>✕</td>
+                    <td>埋め込みの削除</td>
+                    <td>埋め込みの削除</td>
+                    <td>埋め込みの削除</td>
+                    <td>メッセージの削除、もしくは変更しない</td>
+                </tr>
+                <tr>
+                    <td class="fixed02">送信する形式</td>
+                    <td>各リンクに対して送信または返信を行う。</br>引用リツイートは繰り返し送信または返信を行う。</br>写真は添付ファイルとして送信されるか、埋め込みに埋め込まれる。</br>動画は添付ファイルとして送信されるが、容量が大きすぎる場合はリンクを送信する。</td>
+                    <td>リンクを編集して投稿</td>
+                    <td>リンクを編集して返信</td>
+                    <td>著者を示し、リンクを編集したメッセージ全文を再投稿</td>
+                    <td>メディアで返信またはメディアと埋め込みを別々に返信またはwebhookを使用してメディアと埋め込みを別々に再作成</td>
+                    <td>リンクを編集して送信</td>
+                    <td>埋め込みで返信</td>
+                    <td>埋め込みで返信し、ビデオがあればビデオを含む2番目の埋め込み</td>
+                    <td>各リンクに対して編集されたリンクで返信</td>
+                    <td>著者のメンション + 編集されたリンクを含むメッセージの再投稿またはwebhookを使用して編集されたリンクでメッセージを再作成</td>
+                    <td>なし</td>
+                </tr>
+                <tr>
+                    <td class="fixed02">リンクの埋め込みをしない設定ができるか</td>
+                    <td class="safe">スポイラーか&lt;&gt;のみ</td>
+                    <td class="safe">✓</td>
+                    <td class="warning">✕</td>
+                    <td class="warning">✕</td>
+                    <td class="safe">✓</td>
+                    <td class="warning">✕</td>
+                    <td class="warning">✕</td>
+                    <td class="safe">&lt;&gt;のみ</td>
+                    <td class="warning">✕</td>
+                    <td class="warning">✕</td>
+                    <td class="warning">✕</td>
+                </tr>
+                <tr>
+                    <td class="fixed02">リンクの送信者がボットの投稿を削除できるか</td>
+                    <td class="safe">✓</td>
+                    <td>✕</td>
+                    <td>✕</td>
+                    <td>✕</td>
+                    <td class="safe">✓</td>
+                    <td>✕</td>
+                    <td>✕</td>
+                    <td class="safe">✓</td>
+                    <td>✕</td>
+                    <td>✕</td>
+                    <td class="warning">✓（全員対象、投票ベース）</td>
+                </tr>
+                <tr>
+                    <td class="fixed02">オープンソースかどうか</td>
+                    <td class="safe">✓</td>
+                    <td class="safe">✓</td>
+                    <td class="safe">✓</td>
+                    <td>✕</td>
+                    <td class="safe">✓</td>
+                    <td>✕</td>
+                    <td class="safe">✓</td>
+                    <td>✕</td>
+                    <td class="safe">✓</td>
+                    <td>✕</td>
+                    <td>✕</td>
+                </tr>
+                <tr>
+                    <td class="fixed02">他のサービスの対応</td>
+                    <td>✕</td>
+                    <td>✕</td>
+                    <td>Youtube Shorts, TikTok, Instagram, Reddit, Pixiv</td>
+                    <td>TikTok, Reddit, Instagram</td>
+                    <td>Tiktok, Reddit</td>
+                    <td>Tiktok, Instagram, Reddit</td>
+                    <td>✕</td>
+                    <td>Bluesky, Instagram, TikTok, Pixiv, DeviantArt, Fur Affinity, e621, Newgrounds</td>
+                    <td>TikTok, Instagram, Reddit</td>
+                    <td>✕</td>
+                    <td>Instagram, Tiktok, 任意のウェブサイト（プロキシを使用）</td>
+                </tr>
+                <tr>
+                    <td class="fixed02">ビジネスモデル</td>
+                    <td class="safe">無料</td>
+                    <td class="safe">無料</td>
+                    <td class="safe">無料</td>
+                    <td class="safe">無料</td>
+                    <td class="safe">無料</td>
+                    <td>フリーミアム</td>
+                    <td class="safe">無料</td>
+                    <td class="safe">無料、寄付受付中</td>
+                    <td class="safe">無料</td>
+                    <td class="safe">無料</td>
+                    <td class="safe">無料</td>
+                </tr>
+                <tr>
+                    <td class="fixed02">その他の機能</td>
+                    <td class="safe">特定の単語、ユーザー、ロール、またはチャンネルを無視する設定が可能。</br>ツイートの翻訳が可能。</br>日本語サポートあり。</td>
+                    <td class="safe">Nitterサポート、特定のチャンネルの無視</td>
+                    <td class="warning">✕</td>
+                    <td class="warning">✕</td>
+                    <td>非ビデオ投稿を無視する設定が可能</td>
+                    <td class="safe">ウェブサイトインターフェース、ダウンロードシステム</td>
+                    <td>プロフィールリンクサポート</td>
+                    <td>ダウンロードシステム</td>
+                    <td class="warning">✕</td>
+                    <td class="warning">✕</td>
+                    <td class="safe">特定のユーザー、ロール、またはチャンネルからの投稿を無視、翻訳。英語サポートあり</td>
+                </tr>
+            </table>
+        </div>
+
+        <p>この表は<a
+                href="https://github.com/Kyrela/FixTweetBot/tree/main?tab=readme-ov-file#comparison-with-other-bots">Kyrela/FixTweetBot</a>(<a
+                href="https://github.com/Kyrela/FixTweetBot/blob/main/LICENSE">MITライセンス</a>)より引用、翻訳、順序の変更を行い掲載しています。もし誤りがあればDiscordId:yussyまで。</p>
+
+    </body>
+
+</html>
